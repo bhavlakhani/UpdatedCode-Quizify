@@ -1,0 +1,209 @@
+<app-header></app-header>
+<mat-horizontal-stepper linear id="reg">
+  <mat-step  [stepControl]="formGroup1" >
+    <ng-template matStepLabel>
+      Fill the details
+    </ng-template>
+    <form [formGroup]="formGroup1">
+      <h2>Registration Form</h2>
+      <mat-form-field appearance="outline" class="username">
+        <mat-label for="name">Name</mat-label>
+        <input
+          matInput
+          placeholder="username"
+          [(ngModel)]="name"
+          pattern="[a-z]{1,15}"
+          formControlName="firstCtrl"
+          required
+        />
+        <mat-hint><b>Username should be in lowercase letters</b></mat-hint>
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline" class="password">
+        <mat-label for="password">Password</mat-label>
+        <input
+          matInput
+          placeholder="Enter your password"
+          [type]="hide ? 'password' : 'text'"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          [(ngModel)]="password"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+        <mat-icon matSuffix (click)="hide = !hide">{{
+          hide ? "visibility_off" : "visibility"
+        }}</mat-icon>
+        <mat-hint><b>Starts with captial,one num & length8!</b></mat-hint>
+      </mat-form-field>
+      <br />
+      <mat-form-field class="emailid" appearance="outline" required>
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Email"
+          [formControl]="emailFormControl"
+          [errorStateMatcher]="matcher"
+          [(ngModel)]="emailId"
+          name="emaiId"
+          required
+        />
+        <mat-hint><b>Enter abc@gmail.com!</b></mat-hint>
+        <mat-error
+          *ngIf="
+            emailFormControl.hasError('email') &&
+            !emailFormControl.hasError('required')
+          "
+        >
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <br />
+      <mat-radio-group
+        appearance="outline"
+        class="gender"
+        [(ngModel)]="gender"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      >
+        <mat-label>Gender</mat-label>
+        <mat-radio-button value="Male">Male </mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+
+      <br />
+      <br />
+      <br />
+      <!-- <button mat-raised-button="next" class="nextbtn">Next<a href = "#"Next (input)="onClick($event)"></a></button> -->
+      <button mat-button class="nextbtn" matStepperNext><b>Next</b></button>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="formGroup2" optional>
+    <form [formGroup]="formGroup2">
+      <ng-template matStepLabel>
+        Select Options
+      </ng-template>
+      <section class="container" [(ngModel)]="selectedTopic">
+        <h3>Select Topic</h3>
+
+        <mat-button-toggle
+          *ngFor="let topic of topicsList"
+          value="{{ topic.name }}"
+          class="col-2 inside1"
+          #value1
+          (click)="addTopic(topic)"
+        >
+          <img
+            src="{{ topic.imageUrl }}"
+            alt="Pic of {{ topic.name }}"
+            height="90px"
+            width="180px"
+          />
+        </mat-button-toggle>
+      </section>
+      <section class="container2" [(ngModel)]="selectedGenre">
+        <h3>Select Genres</h3>
+
+        <mat-button-toggle
+          *ngFor="let genre of genresList"
+          value="{{ genre.name }}"
+          class="col-2 inside"
+          #value2
+          (click)="addGenre(genre)"
+        >
+          <img
+            src="{{ genre.imageUrl }}"
+            alt="Pic of {{ genre.name }}"
+            height="80px"
+            width="178px"
+        /></mat-button-toggle>
+      </section>
+      <br />
+      <div>
+        <button mat-button class="prebtn" matStepperPrevious>
+          <b>Back</b>
+        </button>
+        <button mat-button class="nexttbtn1" matStepperNext (click)="display()">
+          <b> Next </b>
+        </button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step  [stepControl]="formGroup3" optional >
+    <form [formGroup]="formGroup3">
+      <ng-template matStepLabel>
+        Check Details
+      </ng-template>
+      <mat-card>
+        <h3>Details of User:</h3>
+        <h4>
+          <section
+            class="laststep"
+            fxLayout
+            fxLayout="column"
+            fxLayoutAlign="center center"
+            fxLayoutGap="10px"
+          >
+            <label class="step3">Username : {{ name }}</label> <br />
+            <br />
+            <label class="step3">Gender : {{ gender }}</label> <br />
+            <br />
+            <label class="step3">emailId : {{ emailId }}</label> <br />
+            <br />
+            Selected Topics:<label
+              class="step3"
+              *ngFor="let topic of selectedTopic"
+            >
+              {{ topic.name }}
+            </label>
+            <br />
+            <br />
+            Selected Genres:<label
+              class="step3"
+              *ngFor="let genre of selectedGenre"
+            >
+              {{ genre.name }}
+            </label>
+          </section>
+        </h4>
+      </mat-card>
+      <br />
+      <br />
+      <button mat-button class="prebtn1" matStepperPrevious><b>Back</b></button>
+      <br />
+      <button
+        mat-raised-button
+        class="submit"
+        (click)="submit($event)"
+        matStepperNext
+      >
+        <b> Submit </b>
+      </button>
+      <br />
+      <br />
+    </form>
+  </mat-step>
+  <mat-step  [stepControl]="formGroup4" editable = "false" >
+    <form [formGroup]="formGroup4">
+      <ng-template matStepLabel>
+        Done
+      </ng-template>
+      <p>
+        <b> Thank you for registering</b> <br /><br />
+        <b> You have successfully signed up as a user!</b>
+      </p>
+      <br />
+      <br />
+      <button
+        mat-raised-button
+        class="mat-raised-button"
+        [routerLink]="['/login']"
+      >
+        Login
+      </button>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>

@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container">
+    <div *ngFor="let q of quiz">
+  
+      <mat-card class="example-card">
+        <b class="mid"><u>{{ q.rules }}</u></b>
+      <!-- <ul>
+        <li>Game Level is  {{ q.level }}</li>
+        <li>Rules: {{ q.description }}</li>
+        <li>Game Id:  {{ q.gameId }}</li>
+        <li>Total no.of. questions: {{ q.noOfQuestion }}</li>
+      </ul> -->
+      <button class="btn"
+      (click)="fetchGameId(q.gameId)"
+      >Start Quiz</button> 
+      </mat-card>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+language: java
+jdk: openjdk11
+services:
+  - mongodb
+  - mysql
+  - neo4j
+cache:
+  directories:
+  - "$HOME/.m2/repository"
+before_install:
+  #   Install Kafka
+  #  - wget http://www.us.apache.org/dist/kafka/0.8.2.1/kafka_2.10-0.8.2.1.tgz -O kafka.tgz
+  - wget http://mirrors.estointernet.in/apache/kafka/2.1.1/kafka_2.11-2.1.1.tgz -O kafka.tgz
+  - mkdir -p kafka && tar xzf kafka.tgz -C kafka --strip-components 1
+  - cd kafka
+  # Run Zookeeper/Kafka on localhost (default ports for ZK, Kafka: 2181, 9092)
+  - bin/zookeeper-server-start.sh config/zookeeper.properties &
+  - sleep 5
+  - bin/kafka-server-start.sh config/server.properties &
+  - sleep 5
+  # Create 'scholars' topic with 3 partitions
+  - cd ../
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+  - cd kafka
+  - bin/kafka-topics.sh --delete --topic questions --zookeeper localhost:2181
+  - bin/kafka-server-stop.sh
+  - sleep 5
+  - bin/zookeeper-server-stop.sh
+  - sleep 5
+  - cd ../
+  - rm -rf kafka
+  - ls
+  - cd ../
+  - ls

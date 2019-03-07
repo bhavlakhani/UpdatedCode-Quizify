@@ -1,0 +1,110 @@
+<app-header></app-header>
+<!-- <section id="Heading">
+  <mat-chip-list fxLayout="row" fxLayoutAlign="center center">
+    <mat-chip color="primary" selected class="headings">{{
+      category.name
+    }}</mat-chip>
+    <i class="material-icons">arrow_forward_ios</i>
+    <mat-chip color="accent" selected class="headings">{{
+      currentTopic.name
+    }}</mat-chip>
+  </mat-chip-list>
+</section> -->
+<section id="game-manager">
+<section class="same-row-block">
+  <mat-form-field>
+    <mat-select
+      placeholder="Select Category"
+      [(value)]="selectedCategory"
+    >
+      <mat-option *ngFor="let category of categories" [value]="category.value">
+        {{ category.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</section>
+
+<br>
+
+<section class="same-row-block">
+  <mat-form-field>
+    <mat-select
+      placeholder="Select Topic"
+      [(value)]="selectedTopic"
+    >
+      <mat-option *ngFor="let topic of topics" [value]="topic.value">
+        {{ topic.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</section>
+
+<br>
+
+<section class="same-row-block">
+  <mat-form-field>
+    <mat-select
+      placeholder="Select Genre"
+      [(value)]="selectedGenre"
+    >
+      <mat-option *ngFor="let genre of genres" [value]="genre.value">
+        {{ genre.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</section>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Enter Name for Game"
+        autocomplete="off"
+        [(ngModel)]="gameName"
+      />
+    </mat-form-field>
+</div>
+
+
+<div class="Level-container" fxLayout="row" fxLayoutAlign="center center">
+<mat-form-field>
+  <mat-select
+      placeholder="Select Game Level"
+      [(value)]="selectedLevel"
+    >
+      <mat-option *ngFor="let level of levels" [value]="level.value">
+        {{ level.viewValue }}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <br>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Question Numbers"
+        autocomplete="off"
+        [(ngModel)]="questionNumber"
+      />
+    </mat-form-field>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <br>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Time Duration"
+        autocomplete="off"
+        [(ngModel)]="timeDuration"
+      />
+    </mat-form-field>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+<button mat-raised-button color="warn" (click)="saveGames()">Save Game</button>
+</div>
+</section>
+

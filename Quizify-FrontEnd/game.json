@@ -1,0 +1,15 @@
+{
+  "game": [
+    {
+      "gameId": 1,
+      "gameName": "Nobbies",
+      "gamesPlayed": 2,
+      "level": "easy",
+      "imageUrl": "json-server",
+      "description": [ "Only one pass is allowed for a question. Answering time per question is only 30 seconds."
+                      ],
+      "likes": 20,
+      "noOfQuestion": 10
+    }
+  ]
+}

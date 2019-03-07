@@ -1,0 +1,191 @@
+<app-header></app-header>
+<section id="QuestionGenerator">
+  <!-- <section id="Heading">
+    <mat-chip-list fxLayout="row" fxLayoutAlign="center center">
+      <mat-chip color="primary" selected class="headings">{{
+        category.name
+      }}</mat-chip>
+      <i class="material-icons">arrow_forward_ios</i>
+      <mat-chip color="accent" selected class="headings">{{
+        currentTopic.name
+      }}</mat-chip>
+    </mat-chip-list>
+  </section> -->
+
+  <section class="same-row-block">
+    <mat-form-field>
+      <mat-select
+        placeholder="Select Category"
+        [(value)]="selectedCategory"
+      >
+        <mat-option *ngFor="let category of categories" [value]="category.value">
+          {{ category.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </section>
+
+  <br>
+
+  <section class="same-row-block">
+    <mat-form-field>
+      <mat-select
+        placeholder="Select Topic"
+        [(value)]="selectedTopic"
+      >
+        <mat-option *ngFor="let topic of topics" [value]="topic.value">
+          {{ topic.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </section>
+
+  <br>
+
+  <section class="same-row-block">
+    <mat-form-field>
+      <mat-select
+        placeholder="Select Genre"
+        [(value)]="selectedGenre"
+      >
+        <mat-option *ngFor="let genre of genres" [value]="genre.value">
+          {{ genre.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </section>
+
+  <section id="Body" fxLayout="row" fxLayoutAlign="center center">
+      <section class="same-row-block">
+        <mat-form-field>
+          <mat-select
+            placeholder="Select Question Type"
+            [(value)]="selectedType"
+          >
+            <mat-option *ngFor="let type of types" [value]="type.value">
+              {{ type.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </section>
+
+      <section class="quetsion-template-tf same-row-block" [ngClass]="{'d-none': (selectedType == 'mcq' || selectedType == '')}">
+        <mat-card class="example-container template-card">
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Question Statement"
+              autocomplete="off"
+              [(ngModel)]="tfStatement"
+            />
+          </mat-form-field>
+
+          <section>
+            <label>Select Corrent Option: </label>
+
+            <mat-radio-group [(ngModel)]="tfselectedOption" required>
+              <mat-radio-button value="true">True</mat-radio-button>
+              <mat-radio-button value="false">False</mat-radio-button>
+            </mat-radio-group>
+          </section>
+
+          <mat-form-field>
+            <mat-select
+              placeholder="Select Question Level"
+              [(value)]="tfselectedLevel"
+            >
+              <mat-option *ngFor="let level of levels" [value]="level.value">
+                {{ level.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button
+            mat-flat-button
+            class="save-button"
+            (click)="saveTFQuestion()"
+          >
+            Save
+          </button>
+        </mat-card>
+      </section>
+
+      <section class="quetsion-template-mcq same-row-block" [ngClass]="{'d-none': (selectedType == 't/f' || selectedType == '')}">
+        <mat-card class="example-container template-card">
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Question Statement"
+              autocomplete="off"
+              [(ngModel)]="mcqStatement"
+            />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Option 1"
+              [(ngModel)]="mcqOption1"
+              autocomplete="off"
+            />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Option 2"
+              [(ngModel)]="mcqOption2"
+              autocomplete="off"
+            />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Option 3"
+              [(ngModel)]="mcqOption3"
+              autocomplete="off"
+            />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Option 4"
+              [(ngModel)]="mcqOption4"
+              autocomplete="off"
+            />
+          </mat-form-field>
+
+          <section>
+            <label>Select Corrent Option: </label>
+
+            <mat-radio-group [(ngModel)]="mcqSelectedOption">
+              <mat-radio-button value="mcqOption1">Option 1</mat-radio-button>
+              <mat-radio-button value="mcqOption2">Option 2</mat-radio-button>
+              <mat-radio-button value="mcqOption3">Option 3</mat-radio-button>
+              <mat-radio-button value="mcqOption4">Option 4</mat-radio-button>
+            </mat-radio-group>
+          </section>
+          <mat-form-field>
+            <mat-select
+              placeholder="Select Question Level"
+              [(value)]="mcqSelectedLevel"
+            >
+              <mat-option *ngFor="let level of levels" [value]="level.value">
+                {{ level.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button
+            mat-flat-button
+            class="save-button"
+            (click)="saveMcqQuestion()"
+          >
+            Save
+          </button>
+        </mat-card>
+      </section>
+  </section>
+</section>

@@ -1,0 +1,269 @@
+<section id="add-game" class="p-15">
+  <section id="stepper">
+    <mat-horizontal-stepper [linear]="false" #stepper>
+      <ng-template matStepperIcon="edit">
+        <mat-icon>check_circle_outline</mat-icon>
+      </ng-template>
+
+      <mat-step>
+        <ng-template matStepLabel>Select Category</ng-template>
+        <mat-button-toggle-group [(ngModel)]="selectedCategory" class="row">
+          <mat-button-toggle
+            *ngFor="let category of categories"
+            [value]="category"
+            class="col-2"
+          >
+            <img
+              src="{{ category.imageUrl }}"
+              alt="Pic of {{ category.name }}"
+            />
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+        <div>
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="checkCategory(stepper)"
+          >
+            Next
+          </button>
+        </div>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Select Topic</ng-template>
+        <mat-button-toggle-group [(ngModel)]="selectedTopic" class="row">
+          <mat-button-toggle
+            *ngFor="let topic of topics"
+            [value]="topic"
+            class="col-2"
+          >
+            <img src="{{ topic.imageUrl }}" alt="Pic of {{ topic.name }}" />
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+        <section>
+          <button
+            mat-raised-button
+            color="primary"
+            class="m-10"
+            matStepperPrevious
+          >
+            Back
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+            class="m-10"
+            (click)="checkTopic(stepper)"
+          >
+            Next
+          </button>
+        </section>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Select Genre</ng-template>
+        <mat-button-toggle-group [(ngModel)]="selectedGenre" class="row">
+          <mat-button-toggle
+            *ngFor="let genre of genres"
+            [value]="genre"
+            class="col-2"
+          >
+            <img src="{{ genre.imageUrl }}" alt="Pic of {{ genre.name }}" />
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+        <section>
+          <button
+            mat-raised-button
+            color="primary"
+            class="m-10"
+            matStepperPrevious
+          >
+            Back
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+            class="m-10"
+            (click)="checkGenre(stepper)"
+          >
+            Next
+          </button>
+        </section>
+      </mat-step>
+
+      <mat-step [stepControl]="gameFormGroup">
+        <form [formGroup]="gameFormGroup">
+          <ng-template matStepLabel>Give Game Details</ng-template>
+          <mat-form-field
+            appearance="outline"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+          >
+            <mat-label>Enter Name for Game</mat-label>
+            <input
+              matInput
+              autocomplete="off"
+              formControlName="gameName"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field
+            appearance="outline"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+          >
+            <mat-label>Enter Image Url for Game</mat-label>
+            <input
+              matInput
+              autocomplete="off"
+              formControlName="gameImageUrl"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field
+            appearance="outline"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+          >
+          
+            <mat-select
+              placeholder="Select Game Level"
+              formControlName="selectedLevel"
+              required
+            >
+              <mat-option *ngFor="let level of levels" [value]="level.value">
+                {{ level.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field
+            appearance="outline"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+          >
+            <mat-label>Enter Number Of Questions</mat-label>
+            <input
+              matInput
+              type="number"
+              autocomplete="off"
+              formControlName="questionNumber"
+              required
+              (keypress)="numberOnly($event)"
+            />
+          </mat-form-field>
+
+          <mat-form-field
+            appearance="outline"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+          >
+            <mat-label>Enter Time Duration</mat-label>
+            <input
+              matInput
+              type="number"
+              autocomplete="off"
+              formControlName="timeDuration"
+              required
+              (keypress)="numberOnly($event)"
+            />
+          </mat-form-field>
+
+          <section>
+            <button
+              mat-raised-button
+              color="primary"
+              class="m-10"
+              matStepperPrevious
+            >
+              Back
+            </button>
+            <button
+              mat-raised-button
+              color="primary"
+              class="m-10"
+              (click)="checkDetails(stepper)"
+            >
+              Next
+            </button>
+          </section>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Confirm Game Details</ng-template>
+        <section class="row">
+          <article class="col-3">
+            <mat-card class="game-card">
+              <mat-card-header>
+                <mat-card-title>{{ gameName }}</mat-card-title>
+                <mat-card-subtitle
+                  >Category : {{ selectedCategory.name }}</mat-card-subtitle
+                >
+                <mat-card-subtitle
+                  >Topic : {{ selectedTopic.name }}</mat-card-subtitle
+                >
+                <mat-card-subtitle
+                  >Genre : {{ selectedGenre.name }}</mat-card-subtitle
+                >
+              </mat-card-header>
+              <img
+                mat-card-image
+                src="{{ gameImageUrl }}"
+                alt="Photo of a {{ gameName }}"
+                class="game-card-image"
+              />
+              <mat-card-content>
+                <ul>
+                  <li>Difficulty Level : {{ selectedLevel }}</li>
+                  <li>Number of Question : {{ questionNumber }}</li>
+                  <li>Total Time : {{ timeDuration }}</li>
+                </ul>
+              </mat-card-content>
+            </mat-card>
+          </article>
+        </section>
+
+        <section>
+                <button
+                mat-raised-button
+                color="primary"
+                class="m-10"
+                matStepperPrevious
+              >
+                Back
+              </button>
+              <button
+                mat-raised-button
+                color="primary"
+                class="m-10"
+                (click)="saveGame(stepper)"
+              >
+                Save
+              </button>
+              <button
+                mat-raised-button
+                color="primary"
+                class="m-10"
+                (click)="stepper.reset()"
+              >
+                Reset
+              </button>
+        </section>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        Game Successfully Saved
+        <section>
+          <button
+          mat-raised-button
+          color="primary"
+          class="m-10"
+          (click)="stepper.reset()"
+        >
+          Add New Game
+          </button>
+        </section>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </section>
+</section>

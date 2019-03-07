@@ -1,0 +1,171 @@
+CREATE (Entertainment:Category {id:1, name: 'Entertainment', imageUrl:'https://mitaanexpress.com/wp-content/uploads/2017/12/336fdcf7d540e4b430a890b63da159c9-1503648561-768x432.png'})
+
+CREATE (Movie:Topic {id:1, name: 'Movie', imageUrl:'https://image.freepik.com/free-vector/cinema-logo_23-2147503279.jpg?1'})
+CREATE (TVshows:Topic {id:2, name: 'TV shows', imageUrl:'https://tallypress.com/wp-content/uploads/2016/12/9-Popular-TV-shows-with-a-Malaysian-Flavour-1.jpg '})
+
+CREATE (Documentary:Genre {id:1,name: 'Documentary', imageUrl:'https://www.filmsite.org/images/documentary-genre.jpg'})
+CREATE (Talkshow:Genre {id:2,name: 'Reality & Talk shows', imageUrl:'https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/2661428/580/386/m1/fpnw/wm1/c1-.jpg?1494334679&s=b42e439d379c45825713ec1c3421f902'})
+CREATE (Action:Genre {id:3,name: 'Action', imageUrl:'https://m.media-amazon.com/images/G/01/IMDb/genres/Fantasy._CB1513316168_SX233_CR0,0,233,131_AL_.jpg'})
+CREATE (Thriller:Genre {id:4,name: 'Thriller & Horror', imageUrl:'https://m.media-amazon.com/images/G/01/IMDb/genres/Thriller._CB1513316169_SX233_CR0,0,233,131_AL_.jpg'})
+CREATE (comedy:Genre {id:5,name: 'Comedy', imageUrl: 'https://m.media-amazon.com/images/G/01/IMDb/genres/Comedy._CB1513316167_SX233_CR0,0,233,131_AL_.jpg'})
+CREATE (Anime:Genre {id:6,name: 'Anime', imageUrl: 'https://m.media-amazon.com/images/G/01/IMDb/genres/Animation._CB1513316167_SX233_CR0,0,233,131_AL_.jpg'})
+CREATE (Romance:Genre {id:7,name: 'Romance', imageUrl:'https://m.media-amazon.com/images/G/01/IMDb/genres/Romance._CB1513316168_SX233_CR0,0,233,131_AL_.jpg'})
+CREATE (SciFi:Genre {id:8,name: 'Sci-Fi & Fantasy', imageUrl:'https://m.media-amazon.com/images/G/01/IMDb/genres/Sci-Fi._CB1513316168_SX233_CR0,0,233,131_AL_.jpg'})
+CREATE (Drama:Genre {id:9,name: 'Drama', imageUrl:'https://m.media-amazon.com/images/G/01/IMDb/genres/Drama._CB1513316168_SX233_CR0,0,233,131_AL_.jpg'})
+CREATE (Historical:Genre {id:10,name: 'Historical', imageUrl:'https://www.listchallenges.com/f/lists/87b065de-25d3-4020-800e-ba0434ecb908.jpg'})
+
+CREATE (Narcos:Tag {id:1,name: 'Narcos'})
+CREATE (BreakingBad:Tag {id:2,name: 'Breaking Bad'})
+CREATE (Mirzapur:Tag {id:3,name: 'Mirzapur'})
+CREATE (Sherlock:Tag {id:4,name: 'Sherlock'})
+CREATE (Sacredgames:Tag {id:5,name: 'Sacred game'})
+CREATE (StrangerThings:Tag {id:6,name: 'Stranger Things'})
+CREATE (Friends:Tag {id:7,name: 'Friends'})
+CREATE (FamilyGuy:Tag {id:8,name: 'Family Guy'})
+CREATE (TarakMehta:Tag {id:9,name: 'Tarak Mehta'})
+CREATE (OnePiece:Tag {id:10,name: 'One Piece'})
+CREATE (DragonBallZ:Tag {id:11,name: 'Dragon Ball Z'})
+CREATE (Pokemon:Tag {id:12,name: 'Pokemon'})
+CREATE (HowIMetYourMother:Tag {id:13,name: 'How I Met Your Mother'})
+CREATE (LUSTstories:Tag {id:14,name: 'LUST stories'})
+CREATE (BeautyAndBeast:Tag {id:15,name: 'Beauty And Beast'})
+CREATE (Arrow:Tag {id:16,name: 'Arrow'})
+CREATE (BlackMirror:Tag {id:17,name: 'BlackMirror'})
+CREATE (Heroes:Tag {id:18,name: 'Heroes'})
+CREATE (KoffeeWithkaran:Tag {id:19,name: 'Koffee With karan'})
+CREATE (DeathByMagic:Tag {id:20,name: 'Death By Magic'})
+CREATE (KapilSharmaShow:Tag {id:21,name: 'Kapil Sharma Show'})
+CREATE (WorldWarII:Tag {id:22,name: 'World War II in color'})
+CREATE (CountdownToDeath:Tag {id:23,name: 'Count Down To Death: Paoulo'})
+CREATE (Gravity:Tag {id:24,name: 'Gravity'})
+CREATE (PrinceOfPersia:Tag {id:25,name: 'Prince of Persia'})
+CREATE (Cindrella:Tag {id:26,name: 'Cindrella'})
+CREATE (Cars:Tag {id:27,name: 'Cars'})
+CREATE (StuartLittle:Tag {id:28,name: 'Stuart Little'})
+CREATE (DoctorStrange:Tag {id:29,name: 'Doctor Strange'})
+CREATE (FAF:Tag {id:30,name: 'Fast & Furious'})
+CREATE (MI:Tag {id:31,name: 'Mission Impossible'})
+CREATE (LincolnLawyer:Tag {id:32,name: 'Lincoln Lawyer'})
+CREATE (TheWalk:Tag {id:33,name: 'The Walk'})
+CREATE (DeathNote:Tag {id:34,name: 'Death Note'})
+CREATE (Dictator:Tag {id:35,name: 'Dictator'})
+CREATE (Ted:Tag {id:36,name: 'Ted'})
+CREATE (Baahubali:Tag {id:37,name: 'Baahubali'})
+CREATE (Race2:Tag {id:38,name: 'Race2'})
+CREATE (ChennaiExpress:Tag {id:39,name: 'Chennai Express'})
+CREATE (Piku:Tag {id:40,name: 'Piku'})
+CREATE (OMG:Tag {id:41,name: 'Oh My God'})
+CREATE (LunchBox:Tag {id:42,name: 'LunchBox'})
+CREATE (Rustom:Tag {id:43,name: 'Rustom'})
+CREATE (Drishyam:Tag {id:44,name: 'Drishyam'})
+CREATE (MohenjoDaro:Tag {id:45,name: 'Mohenjo Daro'})
+CREATE (BajiraoMastani:Tag {id:46,name: 'BajiraoMastani'})
+CREATE (JodhaAkbar:Tag {id:47,name: 'JodhaAkbar'})
+CREATE (DDLJ:Tag {id:48,name: 'Dilwale Dulhaniya Le Jayenge'})
+CREATE (Ashiqui2:Tag {id:49,name: 'Ashiqui 2'})
+CREATE (APGK:Tag {id:50,name: 'Ajab Prem Ki Ghazab Kahani'})
+
+CREATE
+(Movie)-[:is_type_of]->(Entertainment),
+(TVshows)-[:is_type_of]->(Entertainment),
+
+(KapilSharmaShow)-[:type_of]->(Talkshow),
+(DeathByMagic)-[:type_of]->(Talkshow),
+(KoffeeWithkaran)-[:type_of]->(Talkshow),
+(CountdownToDeath)-[:type_of]->(Documentary),
+(WorldWarII)-[:type_of]->(Documentary),
+(Narcos)-[:type_of]->(Action),
+(BreakingBad)-[:type_of]->(Action),
+(Mirzapur)-[:type_of]->(Action),
+(DoctorStrange)-[:type_of]->(Action),
+(FAF)-[:type_of]->(Action),
+(MI)-[:type_of]->(Action),
+(Baahubali)-[:type_of]->(Action),
+(Race2)-[:type_of]->(Action),
+(Sherlock)-[:type_of]->(Thriller),
+(Sacredgames)-[:type_of]->(Thriller),
+(StrangerThings)-[:type_of]->(Thriller),
+(LincolnLawyer)-[:type_of]->(Thriller),
+(TheWalk)-[:type_of]->(Thriller),
+(DeathNote)-[:type_of]->(Thriller),
+(Friends)-[:type_of]->(comedy),
+(TarakMehta)-[:type_of]->(comedy),
+(FamilyGuy)-[:type_of]->(comedy),
+(Dictator)-[:type_of]->(comedy),
+(Ted)-[:type_of]->(comedy),
+(ChennaiExpress)-[:type_of]->(comedy),
+(Piku)-[:type_of]->(comedy),
+(OMG)-[:type_of]->(comedy),
+(HowIMetYourMother)-[:type_of]->(Romance),
+(LUSTstories)-[:type_of]->(Romance),
+(BeautyAndBeast)-[:type_of]->(Romance),
+(DDLJ)-[:type_of]->(Romance),
+(Ashiqui2)-[:type_of]->(Romance),
+(APGK)-[:type_of]->(Romance),
+(OnePiece)-[:type_of]->(Anime),
+(DragonBallZ)-[:type_of]->(Anime),
+(Pokemon)-[:type_of]->(Anime),
+(Cindrella)-[:type_of]->(Anime),
+(Cars)-[:type_of]->(Anime),
+(StuartLittle)-[:type_of]->(Anime),
+(BlackMirror)-[:type_of]->(SciFi),
+(Heroes)-[:type_of]->(SciFi),
+(Arrow)-[:type_of]->(SciFi),
+(Gravity)-[:type_of]->(SciFi),
+(PrinceOfPersia)-[:type_of]->(SciFi),
+(LunchBox)-[:type_of]->(Drama),
+(Rustom)-[:type_of]->(Drama),
+(Drishyam)-[:type_of]->(Drama),
+(MohenjoDaro)-[:type_of]->(Historical),
+(BajiraoMastani)-[:type_of]->(Historical),
+(JodhaAkbar)-[:type_of]->(Historical),
+(Narcos)-[:is_a]->(TVshows),
+(BreakingBad)-[:is_a]->(TVshows),
+(Mirzapur)-[:is_a]->(TVshows),
+(DoctorStrange)-[:is_a]->(Movie),
+(FAF)-[:is_a]->(Movie),
+(MI)-[:is_a]->(Movie),
+(Baahubali)-[:is_a]->(Movie),
+(Race2)-[:is_a]->(Movie),
+(Sherlock)-[:is_a]->(TVshows),
+(Sacredgames)-[:is_a]->(TVshows),
+(StrangerThings)-[:is_a]->(TVshows),
+(LincolnLawyer)-[:is_a]->(Movie),
+(TheWalk)-[:is_a]->(Movie),
+(DeathNote)-[:is_a]->(Movie),
+(Friends)-[:is_a]->(TVshows),
+(TarakMehta)-[:is_a]->(TVshows),
+(FamilyGuy)-[:is_a]->(TVshows),
+(Dictator)-[:is_a]->(Movie),
+(Ted)-[:is_a]->(Movie),
+(ChennaiExpress)-[:is_a]->(Movie),
+(Piku)-[:is_a]->(Movie),
+(OMG)-[:is_a]->(Movie),
+(HowIMetYourMother)-[:is_a]->(TVshows),
+(LUSTstories)-[:is_a]->(TVshows),
+(BeautyAndBeast)-[:is_a]->(TVshows),
+(DDLJ)-[:is_a]->(Movie),
+(Ashiqui2)-[:is_a]->(Movie),
+(APGK)-[:is_a]->(Movie),
+(OnePiece)-[:is_a]->(TVshows),
+(DragonBallZ)-[:is_a]->(TVshows),
+(Pokemon)-[:is_a]->(TVshows),
+(Cindrella)-[:is_a]->(Movie),
+(Cars)-[:is_a]->(Movie),
+(StuartLittle)-[:is_a]->(Movie),
+(BlackMirror)-[:is_a]->(TVshows),
+(Heroes)-[:is_a]->(TVshows),
+(Arrow)-[:is_a]->(TVshows),
+(Gravity)-[:is_a]->(Movie),
+(PrinceOfPersia)-[:is_a]->(Movie),
+(LunchBox)-[:is_a]->(Movie),
+(Rustom)-[:is_a]->(Movie),
+(Drishyam)-[:is_a]->(Movie),
+(MohenjoDaro)-[:is_a]->(Movie),
+(BajiraoMastani)-[:is_a]->(Movie),
+(JodhaAkbar)-[:is_a]->(Movie),
+(KapilSharmaShow)-[:is_a]->(TVshows),
+(DeathByMagic)-[:is_a]->(TVshows),
+(KoffeeWithkaran)-[:is_a]->(TVshows),
+(CountdownToDeath)-[:is_a]->(TVshows),
+(WorldWarII)-[:is_a]->(TVshows);

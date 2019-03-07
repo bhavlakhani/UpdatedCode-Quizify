@@ -1,0 +1,134 @@
+#reg {
+  background-image: url("https://accounts.rosharonmontessori.edu.gh/wp-content/uploads/2017/02/71.jpg");
+  height: 640px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+  margin-top: 80px;
+  margin-left: -10px;
+  margin-right: -7px;
+}
+.example-card {
+  flex-wrap: wrap;
+}
+.container {
+  padding-left: 400px;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+mat-card {
+  margin-top: 10px;
+  margin-left: 510px;
+  width: 500px;
+  height: 300px;
+  background-color: gainsboro;
+}
+.laststep {
+  margin-left: 130px;
+}
+
+.submit {
+  float: right;
+  bottom: 140px;
+}
+p {
+  font-family: sans-serif;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h2 {
+  margin-left: 43.5%;
+  font-family: sans-serif;
+}
+.username {
+  margin-top: 2%;
+  margin-left: 40.5%;
+  width: 20%;
+}
+.mat-raised-button {
+  margin-left: 47%;
+  background-color: lightgray;
+  margin-bottom: 60px;
+}
+
+.password {
+  margin-left: 40.5%;
+  width: 20%;
+}
+
+.emailid {
+  margin-left: 40.5%;
+  width: 20%;
+}
+.username {
+  margin-left: 40.5%;
+  width: 20%;
+}
+.button {
+  margin-left: 34%;
+  width: 40%;
+  height: 100px;
+}
+
+.nextbtn {
+  margin-left: 80%;
+}
+
+.prebtn {
+  margin-right: 90%;
+  margin-bottom: 100px;
+}
+.prebtn1 {
+  margin-right: 40%;
+  margin-bottom: 100px;
+}
+
+.inside1 {
+  padding: 10px;
+  width: 200px;
+  height: 100px;
+  line-height: 50px;
+  font-weight: bolder;
+  font-size: 2em;
+  text-align: center;
+  margin-left: 60px;
+}
+li {
+  text-decoration: none;
+  display: inline;
+  margin: 1px;
+}
+.mat-radio-button {
+  margin-left: 16px;
+}
+.gender {
+  margin-left: 42.5%;
+}
+
+.container h3 {
+  display: flex;
+  margin-left: 50px;
+  font-family: sans-serif;
+}
+.inside {
+  padding: 10px;
+  width: 200px;
+  height: 90px;
+  line-height: 50px;
+  font-weight: bolder;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 10px;
+  margin-left: 60px;
+  margin-right: 0px;
+}

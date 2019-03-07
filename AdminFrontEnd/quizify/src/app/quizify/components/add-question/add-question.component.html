@@ -1,0 +1,165 @@
+<section id="add-question">
+  <section class="row center">
+    <article class="col-4">
+      <mat-form-field>
+        <mat-select
+          placeholder="Select Category"
+          [(ngModel)]="selectedCategory"
+        >
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let category of categories" [value]="category">
+            <img src="{{ category.imageUrl }}" alt="" class="icon-image" />
+            {{ category.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </article>
+    <article class="col-4">
+      <mat-form-field>
+        <mat-select placeholder="Select Topic" [(ngModel)]="selectedTopic">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let topic of topics" [value]="topic">
+            <img src="{{ topic.imageUrl }}" alt="" class="icon-image" />
+            {{ topic.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </article>
+    <article class="col-4">
+      <mat-form-field>
+        <mat-select placeholder="Select Genre" [(ngModel)]="selectedGenre">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let genre of genres" [value]="genre">
+            <img src="{{ genre.imageUrl }}" alt="" class="icon-image" />
+            {{ genre.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </article>
+  </section>
+  <section class="row center">
+    <article class="col-6">
+      <mat-tab-group>
+        <mat-tab label="True/False">
+          <mat-card class="example-container template-card">
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Question Statement"
+                autocomplete="off"
+                [(ngModel)]="tfStatement"
+              />
+            </mat-form-field>
+
+            <section class="row">
+              <mat-radio-group [(ngModel)]="tfselectedOption" required>
+                <mat-radio-button value="true" class="p-10"
+                  >True</mat-radio-button
+                >
+                <mat-radio-button value="false" class="p-10"
+                  >False</mat-radio-button
+                >
+              </mat-radio-group>
+            </section>
+
+            <mat-form-field>
+              <mat-select
+                placeholder="Select Question Level"
+                [(value)]="tfselectedLevel"
+              >
+                <mat-option *ngFor="let level of levels" [value]="level.value">
+                  {{ level.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br />
+            <button
+              mat-raised-button
+              color="primary"
+              class="m-10"
+              (click)="saveTFQuestion()"
+            >
+              Save
+            </button>
+          </mat-card>
+        </mat-tab>
+        <mat-tab label="Multiple Choice">
+          <mat-card class="example-container template-card">
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Question Statement"
+                autocomplete="off"
+                [(ngModel)]="mcqStatement"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="row">
+              <input
+                matInput
+                placeholder="Option 1"
+                [(ngModel)]="mcqOption1"
+                autocomplete="off"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="row">
+              <input
+                matInput
+                placeholder="Option 2"
+                [(ngModel)]="mcqOption2"
+                autocomplete="off"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="row">
+              <input
+                matInput
+                placeholder="Option 3"
+                [(ngModel)]="mcqOption3"
+                autocomplete="off"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="row">
+              <input
+                matInput
+                placeholder="Option 4"
+                [(ngModel)]="mcqOption4"
+                autocomplete="off"
+              />
+            </mat-form-field>
+
+            <section class="row">
+              <mat-radio-group [(ngModel)]="mcqSelectedOption">
+                <mat-radio-button value="mcqOption1" class="p-10">Option 1</mat-radio-button>
+                <mat-radio-button value="mcqOption2" class="p-10">Option 2</mat-radio-button>
+                <mat-radio-button value="mcqOption3" class="p-10">Option 3</mat-radio-button>
+                <mat-radio-button value="mcqOption4" class="p-10">Option 4</mat-radio-button>
+              </mat-radio-group>
+            </section>
+            <mat-form-field class="row">
+              <mat-select
+                placeholder="Select Question Level"
+                [(value)]="mcqSelectedLevel"
+              >
+                <mat-option *ngFor="let level of levels" [value]="level.value">
+                  {{ level.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <button
+            mat-raised-button
+            color="primary"
+            class="m-10"
+              (click)="saveMcqQuestion()"
+            >
+              Save
+            </button>
+          </mat-card>
+        </mat-tab>
+      </mat-tab-group>
+    </article>
+  </section>
+</section>

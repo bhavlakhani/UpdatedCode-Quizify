@@ -1,0 +1,33 @@
+span
+ {
+ color:  white;
+ //padding-right: 600px;
+ float: left;
+ padding-left: 20px;
+ padding-top: 20px;
+ font-size: 20px;
+ }
+ footer
+{
+ position: relative;
+ // float: right;
+ top:720px;
+ background-color:black;
+ width: 1533px;
+ height: 60px;
+ right: 0px;
+ position: fixed;
+ z-index: 1;
+ opacity: 1;
+ }
+
+ a{
+  margin-left:10px;
+   padding: 15px;
+   text-align: right;
+   color:white;
+   float: right;
+   font-size: 23px;
+   text-decoration: none;
+
+ }

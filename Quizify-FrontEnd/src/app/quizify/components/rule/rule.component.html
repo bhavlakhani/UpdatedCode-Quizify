@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<body>
+  
+<div class="card">
+    
+<mat-card class="card1">
+    
+    <mat-toolbar class="s1" style=" flex: 1 1 auto;">
+        <span>Rules:</span>
+    </mat-toolbar>
+    <ul>
+        <li>Number of Questions are fixed.</li>
+        <li>You cannot Go back to the previous question.</li>
+        <li>Time is also fixed.</li>
+        <li>Switching to another window is stricted.</li>
+        <li>One Quiz can be played at a time.</li>
+    </ul>
+    
+    <!-- This fills the remaining space of the current row -->
+    
+<div class="njoy">
+<button class="button1" mat-raised-button [routerLink]="[ '/cards' ]" color="primary">Cancel</button>
+<button class="button2" mat-raised-button [routerLink]="[ '/rule']" color="primary">Start Game</button>
+</div>
+</mat-card>
+</div>
+</body>
+<app-footer></app-footer>

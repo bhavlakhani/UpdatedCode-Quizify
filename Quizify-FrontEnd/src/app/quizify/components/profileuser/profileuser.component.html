@@ -1,0 +1,89 @@
+<app-header></app-header>
+<!-- <div class="a" class="container">
+    <h1>User Details</h1>
+    <div>
+      <p>Userid: 1</p>
+      <p>Name: Anjali</p>
+      <p>Gender: Female</p>
+    </div>
+     
+</div> -->
+
+<section
+
+      class="laststep"
+
+      fxLayout
+
+      fxLayout="column"
+
+      fxLayoutAlign="center center"
+
+      fxLayoutGap="10px"
+
+    >
+
+    <div class = "col">
+
+   
+
+  </div>
+
+
+
+  <mat-card class="col1">
+    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5TUuXmx_ZWDtD3i0Dzeow2nQn1GrAjPYbqWUlAI8trL7440G2">
+  <br/>
+  <br/>
+    <label class="step1">Name : {{ reg.name }}</label> <br />
+
+    <br />
+
+
+
+    <label class="step1">User Id : {{ reg.userId }}</label> <br />
+
+    <br />
+
+
+
+    <label class="step1">MobileNo : {{ reg.mobileNo }}</label> <br />
+
+    <br />
+
+
+
+    <label class="step1">Date of Birth : {{ reg.dateofBirth }}</label> <br />
+
+    <br />
+
+    <label class="step1">Gender : {{ gender }}</label> <br />
+
+    <br />
+
+
+
+
+
+    <div class="btn1">
+
+    <button mat-raised-button (click)="Profile()">Edit</button>
+    </div>
+
+    <div class="btn2">
+    <button mat-raised-button (click)="Profile()">Submit</button>
+    </div>
+
+
+    </mat-card>
+
+
+
+    <!-- <button mat-button fxFlex = "10" class="step3" (click)="saveDetails()">Submit</button> -->
+
+
+
+    <!-- <p>{{Msg}}</p> -->
+
+  </section>

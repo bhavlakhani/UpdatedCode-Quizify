@@ -1,0 +1,92 @@
+{
+  "quiz":[
+{
+  "gameId":"101",
+  "name": "Entertainment",
+  "gamesPlayed": "QUIZ",
+  " level": "Easy",
+  "imageUrl": "https://previews.123rf.com/images/blankstock/blankstock1501/blankstock150101150/35194262-quiz-speech-bubble-sign-icon-questions-and-answers-game-symbol-gray-flat-button-with-shadow-modern-u.jpg",
+  "description": "",
+  "duration":"",
+  "likes":"",
+  "numOfQuestion":""
+},
+{
+  "gameId":"201",
+  "name": "Comedy",
+  "gamesPlayed": "QUIZ",
+  " level": "Hard",
+  "imageUrl": "https://img.freepik.com/free-vector/checkered-background-with-notebook-game-items_23-2147593456.jpg?size=338&ext=jpg",
+  "description": "",
+  "duration":"",
+  "likes":"",
+  "numOfQuestion":""
+},
+{
+  "gameId":"301",
+  "name": "Romantic",
+  "gamesPlayed": "QUIZ",
+  " level": "Medium",
+  "imageUrl": "https://files.slack.com/files-pri/TEKVBAYJ1-FGK7QDFRV/quizbackground.jpg",
+  "description": "",
+  "duration":"",
+  "likes":"",
+  "numOfQuestion":""
+},
+{
+  "gameId":"401",
+  "name": "Entertainment",
+  "gamesPlayed": "QUIZ",
+  " level": "Easy",
+  "imageUrl": "https://st3.depositphotos.com/1496387/17432/v/1600/depositphotos_174320100-stock-illustration-quiz-show-game-concept-players.jpg",
+  "description": "",
+  "duration":"",
+  "likes":"",
+  "numOfQuestion":""
+},
+{
+  "gameId":"501",
+  "name": "Entertainment",
+  "gamesPlayed": "QUIZ",
+  " level": "Easy",
+  "imageUrl": "https://st3.depositphotos.com/1496387/17432/v/1600/depositphotos_174320100-stock-illustration-quiz-show-game-concept-players.jpg",
+  "description": "",
+  "duration":"",
+  "likes":"",
+  "numOfQuestion":""
+}
+,
+{
+  "gameId":"501",
+  "name": "Entertainment",
+  "gamesPlayed": "QUIZ",
+  " level": "Easy",
+  "imageUrl": "https://st3.depositphotos.com/1496387/17432/v/1600/depositphotos_174320100-stock-illustration-quiz-show-game-concept-players.jpg",
+  "description": "",
+  "duration":"",
+  "likes":"",
+  "numOfQuestion":""
+},
+{
+  "gameId":"601",
+  "name": "Entertainment",
+  "gamesPlayed": "QUIZ",
+  " level": "Easy",
+  "imageUrl": "https://st3.depositphotos.com/1496387/17432/v/1600/depositphotos_174320100-stock-illustration-quiz-show-game-concept-players.jpg",
+  "description": "",
+  "duration":"",
+  "likes":"",
+  "numOfQuestion":""
+}
+
+
+
+
+
+
+
+]
+  
+
+  
+}

@@ -1,0 +1,74 @@
+{
+    "category":[
+       {
+         "id":"1",
+         "name": "Entertainment",
+         "imageUrl": "https://mitaanexpress.com/wp-content/uploads/2017/12/336fdcf7d540e4b430a890b63da159c9-1503648561-768x432.png"
+       }
+      ],
+    "topic":[
+       {
+             "id":"1",
+             "name": "Movies",
+             "imageUrl": "https://cdn.dribbble.com/users/399880/screenshots/2863970/take_2_movies.jpg"
+           },
+       {
+             "id":"2",
+             "name": "TV Shows",
+             "imageUrl": "https://tallypress.com/wp-content/uploads/2016/12/9-Popular-TV-shows-with-a-Malaysian-Flavour-1.jpg"
+           }
+      ],
+   "genre":[
+       {
+             "id":"1",
+             "name": "Documentary",
+             "imageUrl": "https://cdni.rt.com/files/2015.12/article/5661d7dac3618841498b45d4.png"
+           },
+       {
+             "id":"2",
+             "name": "Reality & Talk Shows",
+             "imageUrl": "https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/2661428/580/386/m1/fpnw/wm1/c1-.jpg?1494334679&s=b42e439d379c45825713ec1c3421f902"
+           },
+       {
+             "id":"3",
+             "name": "Action",
+             "imageUrl": "https://m.media-amazon.com/images/G/01/IMDb/genres/Action._CB1513316166_SX233_CR0,0,233,131_AL_.jpg"
+           },
+       {
+             "id":"4",
+             "name": "Thriller",
+             "imageUrl": "https://m.media-amazon.com/images/G/01/IMDb/genres/Thriller._CB1513316169_SX233_CR0,0,233,131_AL_.jpg"
+           },
+       {
+             "id":"5",
+             "name": "Comedy",
+             "imageUrl": "https://m.media-amazon.com/images/G/01/IMDb/genres/Comedy._CB1513316167_SX233_CR0,0,233,131_AL_.jpg"
+           },
+       {
+             "id":"6",
+             "name": "Anime",
+             "imageUrl": "https://m.media-amazon.com/images/G/01/IMDb/genres/Animation._CB1513316167_SX233_CR0,0,233,131_AL_.jpg"
+           },
+       {
+             "id":"7",
+             "name": "Romance",
+             "imageUrl": "https://m.media-amazon.com/images/G/01/IMDb/genres/Romance._CB1513316168_SX233_CR0,0,233,131_AL_.jpg"
+           },
+       {
+             "id":"8",
+             "name": "Drama",
+             "imageUrl": "https://m.media-amazon.com/images/G/01/IMDb/genres/Drama._CB1513316168_SX233_CR0,0,233,131_AL_.jpg"
+           },
+       {
+             "id":"9",
+             "name": "SciFi",
+             "imageUrl": "https://m.media-amazon.com/images/G/01/IMDb/genres/Sci-Fi._CB1513316168_SX233_CR0,0,233,131_AL_.jpg"
+           },
+       {
+             "id":"10",
+             "name": "Historical",
+             "imageUrl": "https://www.listchallenges.com/f/lists/87b065de-25d3-4020-800e-ba0434ecb908.jpg"
+           }
+   
+      ]
+   }

@@ -1,0 +1,41 @@
+.container{
+  display: flex;
+  // width: 80%;
+  // height: 100%;
+  bottom: 300px;
+  margin: 350px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  padding-right: 20px;
+  
+}
+
+
+.example-card
+{
+  margin: 20px;
+  height: 200px;
+  box-shadow: 5px 5px black;
+  background-color: rgb(189, 165, 228);
+  padding: 5px;
+}
+
+.mid
+{
+  margin-left: 45%;
+}
+
+
+// .example-card
+// {
+//     width: 300px;
+// }
+
+.btn{
+
+  width: 100px;
+  height: 30px;
+  margin-left: 40%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

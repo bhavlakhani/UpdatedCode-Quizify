@@ -1,0 +1,11 @@
+<app-header></app-header>
+<button mat-raised-button color="primary" [matMenuTriggerFor]="menu" (click)="openProfileMenu()">
+       <mat-icon>account_circle</mat-icon>
+       <span>Profile</span>
+</button>
+
+ <mat-menu #menu="matMenu">
+     <button mat-menu-item  (click)="openDetails()">Account</button>
+     <button mat-menu-item  (click)="openHistory()">History</button>
+ </mat-menu>
+ 

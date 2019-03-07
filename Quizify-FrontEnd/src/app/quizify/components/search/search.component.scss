@@ -1,0 +1,88 @@
+
+img {
+  width: 242px;
+   height:250px;
+  
+   padding-right: -5px;
+   padding-top: 30px;
+   padding-left: 5px;
+   
+
+ }
+
+
+
+.container{
+  display:flex;
+}
+.product--blue{
+  box-shadow: 1px 5px 15px #CCC;
+  width: 24.7em;
+  height: 300px;
+  border-radius: 3px;
+  padding: 2em;
+  margin: 1em;
+  overflow: auto;
+  position: relative;
+  flex: auto;
+}
+mat-card-header{
+  font-family: FontAwesome;
+  margin :auto;
+  object-fit: cover; /*this makes de image in src fit to the size of specified below*/
+  width: 67%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+  height: 100%;
+}
+mat-card-title{
+  position: absolute;
+  font-size: 5px;
+  padding-left: 40px;;
+  top: 5px;
+}
+
+mat-card-actions{
+  position:absolute;
+  top: 315px;
+  bottom: 10px;
+  padding-left: 37px;
+  
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 50px;
+  padding-left: 14.5px;
+}
+mat-card-action button {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: black;
+  border-radius: 3px;
+  padding: 1em 3em;
+  margin: 1em 0 0 0;
+  background: none;
+  cursor: pointer;
+ 
+  
+}
+
+mat-card-action button:before {
+  font-family: FontAwesome;
+  content: '\f07A';
+  color:black;
+  position: absolute;
+  font-size: 1.5em;
+  margin: 0 -1.5em;
+  
+}
+mat-card-action button:hover:before {
+  color: #2B2D42;
+}
+
+.ser
+{
+  padding-top: 30px;
+  padding-left: 500px;
+  width: 500px;
+}

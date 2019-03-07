@@ -1,0 +1,172 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  [class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .col-1 {
+      width: 8%;
+    }
+    .col-2 {
+      width: 16%;
+    }
+    .col-3 {
+      width: 25%;
+    }
+    .col-4 {
+      width: 33%;
+    }
+    .col-5 {
+      width: 41%;
+    }
+    .col-6 {
+      width: 50%;
+    }
+    .col-7 {
+      width: 58%;
+    }
+    .col-8 {
+      width: 66%;
+    }
+    .col-9 {
+      width: 75%;
+    }
+    .col-10 {
+      width: 83%;
+    }
+    .col-11 {
+      width: 91%;
+    }
+    .col-12 {
+      width: 100%;
+    }
+  }
+  
+  .p-15 {
+    padding: 15px;
+  }
+  
+  .p-10 {
+    padding: 10px;
+  }
+  
+  .p-5 {
+    padding: 5px;
+  }
+
+  .m-15 {
+    margin: 15px;
+  }
+  
+  .m-10 {
+    margin: 10px;
+  }
+  
+  .m-5 {
+    margin: 5px;
+  }
+
+ .topics {
+    border-bottom: 1px solid black;
+ }
+
+ .mat-card:hover {
+    box-shadow: 5px 5px 5px black;
+  }
+  
+  .mat-card {
+    border: 1px solid black;
+    border-radius: 10px !important;
+  }
+
+  img {
+      height: 150px;
+      width: 200px;
+      border-radius: 7px;
+  }
+
+.f-left {
+    position: absolute;
+    right: 0;
+  }
+
+  .d-inline {
+      display: inline;
+  }
+.mat-button-toggle {
+margin: 10px;
+padding-top: 17px;
+padding-bottom: 17px;
+border-radius: 15px;
+border: 1px solid grey;
+box-shadow: none;
+}
+
+.mat-button-toggle-button {
+  box-shadow: none;
+  border: 0px;
+  }
+
+mat-button-toggle:hover,
+.mat-raised-button:hover {
+  box-shadow: 5px 5px 5px black;
+  }
+
+  .mat-raised-button {
+    margin: 10px !important;
+  }
+
+  .mat-button-toggle-checked {
+    background-color: gainsboro;
+    box-shadow: 5px 5px 5px black;
+  }
+
+#add-game {
+ background: url('../../../../assets/admin3.jpg');
+ background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+mat-button-toggle-group {
+  border: none;
+}
+
+#stepper {
+  color: black;
+}
+
+.mat-stepper-horizontal,
+.mat-stepper-vertical {
+  background: rgba(0, 0, 0,0);
+}
+
+.mat-step-header,
+.mat-step-label {
+  color: white !important;
+  font-size: 17px !important;
+ }
+
+ .mat-horizontal-stepper-header{
+  cursor: pointer !important;
+  pointer-events: none !important;
+}
+
+.game-card {
+  text-align: left !important;
+  margin: auto !important;
+}
+
+.game-card-image {
+  border-radius: 0px !important;
+  border-top: 1px solid black !important;
+  border-bottom: 1px solid black !important;
+}

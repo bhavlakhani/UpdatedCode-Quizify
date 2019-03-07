@@ -1,0 +1,123 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    width: 8%;
+  }
+  .col-2 {
+    width: 16%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33%;
+  }
+  .col-5 {
+    width: 41%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58%;
+  }
+  .col-8 {
+    width: 66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83%;
+  }
+  .col-11 {
+    width: 91%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+
+.game-card:hover {
+  box-shadow: 5px 5px 5px black;
+}
+
+.game-card {
+  border: 1px solid black;
+  border-radius: 10px !important;
+}
+
+.mat-card-image {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.mat-mini-fab {
+  margin: 5px !important;
+  box-shadow: none;
+}
+
+.mat-mini-fab:hover {
+  box-shadow: 5px 5px 5px black;
+}
+
+img {
+  height: 250px;
+}
+
+.game-tooltip {
+  font-size: 15px;
+  background-color: black;
+  box-shadow: 5px 5px 5px black;
+}
+
+.mat-button {
+  margin: 15px;
+}
+
+.side-nav {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.side-nav > button {
+  font-size: 20px;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+.side-nav > button:hover {
+  box-shadow: 5px 5px 5px black;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-5 {
+  padding: 5px;
+}
+
+.game-add-button {
+  bottom: 10px;
+  right: 10px;
+  position: fixed !important;
+  z-index: 999;
+}

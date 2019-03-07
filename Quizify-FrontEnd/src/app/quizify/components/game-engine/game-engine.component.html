@@ -1,0 +1,48 @@
+<section id="game-window" class="p-10">
+  <mat-horizontal-stepper>
+    <mat-step *ngFor="let question of questions; let i = index">
+      <ng-template matStepLabel>Question {{ i }}</ng-template>
+      <mat-chip-list class="row">
+        <section col="col-6">
+          <article class="p-10">
+            <mat-chip class="question-chip">
+              <section>
+                {{ question.statement }}
+              </section>
+            </mat-chip>
+          </article>
+        </section>
+      </mat-chip-list>
+      <mat-chip-list class="row">
+        <section
+          class="col-6"
+          *ngFor="let option of question.options; let j = index"
+        >
+          <article class="p-10">
+            <mat-chip class="m-10 option-chip">
+              <section class="options">{{ j + 1 }}. {{ option }}</section>
+            </mat-chip>
+          </article>
+        </section>
+      </mat-chip-list>
+      <div>
+        <button
+          mat-raised-button
+          color="primary"
+          class="nav-btn"
+          matStepperPrevious
+        >
+          Back
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          class="nav-btn"
+          matStepperNext
+        >
+          Next
+        </button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</section>

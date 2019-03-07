@@ -1,0 +1,100 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  [class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .col-1 {
+      width: 8%;
+    }
+    .col-2 {
+      width: 16%;
+    }
+    .col-3 {
+      width: 25%;
+    }
+    .col-4 {
+      width: 33%;
+    }
+    .col-5 {
+      width: 41%;
+    }
+    .col-6 {
+      width: 50%;
+    }
+    .col-7 {
+      width: 58%;
+    }
+    .col-8 {
+      width: 66%;
+    }
+    .col-9 {
+      width: 75%;
+    }
+    .col-10 {
+      width: 83%;
+    }
+    .col-11 {
+      width: 91%;
+    }
+    .col-12 {
+      width: 100%;
+    }
+  }
+  
+  .p-15 {
+    padding: 15px;
+  }
+  
+  .p-10 {
+    padding: 10px;
+  }
+  
+  .p-5 {
+    padding: 5px;
+  }
+
+  .m-15 {
+    margin: 15px;
+  }
+  
+  .m-10 {
+    margin: 10px;
+  }
+  
+  .m-5 {
+    margin: 5px;
+  }
+
+
+.icon-image {
+    height: 40px;
+    width: 55px;
+  }
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+#add-question {
+  background: url('../../../../assets/login1.jpg');
+ background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px;
+  /* color: white; */
+}
+
+mat-card {
+  background: rgba(0, 0, 0,0);
+}

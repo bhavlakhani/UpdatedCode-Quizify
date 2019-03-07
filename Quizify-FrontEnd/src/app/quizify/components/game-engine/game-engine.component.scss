@@ -1,0 +1,156 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  [class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .col-1 {
+      width: 8%;
+    }
+    .col-2 {
+      width: 16%;
+    }
+    .col-3 {
+      width: 25%;
+    }
+    .col-4 {
+      width: 33%;
+    }
+    .col-5 {
+      width: 41%;
+    }
+    .col-6 {
+      width: 50%;
+    }
+    .col-7 {
+      width: 58%;
+    }
+    .col-8 {
+      width: 66%;
+    }
+    .col-9 {
+      width: 75%;
+    }
+    .col-10 {
+      width: 83%;
+    }
+    .col-11 {
+      width: 91%;
+    }
+    .col-12 {
+      width: 100%;
+    }
+  }
+  
+  .p-15 {
+    padding: 15px !important;
+  }
+  
+  .p-10 {
+    padding: 10px !important;
+  }
+  
+  .p-5 {
+    padding: 5px !important;
+  }
+
+  .m-15 {
+    margin: 15px !important;
+  }
+  
+  .m-10 {
+    margin: 10px !important;
+  }
+  
+  .m-5 {
+    margin: 5px !important;
+  }
+
+.mat-stepper-horizontal,
+.mat-stepper-vertical {
+  background: rgba(0, 0, 0,0);
+}
+
+.mat-step-header,
+.mat-step-label {
+  font-size: 17px !important;
+  display: none !important;
+ }
+
+ .mat-horizontal-stepper-header{
+  cursor: pointer !important;
+  pointer-events: none !important;
+  display: none !important;
+}
+
+.mat-horizontal-stepper-content{
+    text-align: center !important;
+  }
+
+.mat-standard-chip {
+    margin: auto !important;
+    padding: 20px !important;
+    height: auto !important;
+    border-radius: 50px !important;
+    max-width: 100% !important;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.mat-horizontal-content-container {
+    height: auto !important;
+}
+
+.nav-btn {
+    background: black !important;
+    color: white !important;
+    margin: 10px !important;
+    border-radius: 50px !important;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.nav-btn:hover{
+    box-shadow: 5px 5px 5px black;
+}
+
+.question-chip {
+    // background-color: gainsboro !important;
+    padding: 20px;
+    cursor: pointer !important;
+  pointer-events: none !important;
+}
+
+.option-list {
+    text-align: center !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.options {
+    margin: auto !important;
+}
+
+.option-chip {
+    cursor: pointer !important;
+    width: 100% !important;
+}
+
+.option-chip:hover {
+    box-shadow: 5px 5px 5px black;
+}
+
+#game-window {
+    background: #3C3B3F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top left, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top left, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

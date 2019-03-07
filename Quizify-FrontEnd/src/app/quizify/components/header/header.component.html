@@ -1,0 +1,52 @@
+<header>
+
+        <div class="logo">
+    
+         <a href="/" >
+    
+             <img src="../assets/images/Quiz (1).jpg" height="75px" width="123">
+    
+         </a>
+    
+        </div>
+    
+        <div class="wrap"  *ngIf=userLogged>
+            <mat-card-actions>
+               <button mat-raised-button color="" [routerLink]="[ '/login']">Login</button>
+               <!-- <button mat-raised-button (click)='logout()'>logout</button>  -->
+            </mat-card-actions>
+         </div>
+         <div class="wrap" *ngIf=flag >
+                <button  mat-button [matMenuTriggerFor]="menu" class="menubar"><img class="icon" src="../../../../assets/images/gender.png"></button>
+                <mat-menu #menu="matMenu">
+               <button mat-menu-item  [routerLink]="[ '/profileuser']">profile</button>
+               <button mat-menu-item (click)='logout()'>logout</button>
+                  <!-- <button mat-menu-item>Item 1</button>
+                  <button mat-menu-item>Item 2</button> -->
+                </mat-menu>
+            <!-- <mat-card-actions>
+               <button mat-raised-button color="" (click)='logout()'>Logout</button>
+                     </mat-card-actions> -->
+         </div>
+    
+         <h1 >QUIZIFY</h1>
+    
+         <!-- <h3>Test Your Knowledge</h3> -->
+    
+         
+    
+         <mat-form-field appearance="inline" >
+    
+             <div class="box">
+    
+                 <input matInput placeholder="Search for quizes" (input)="search($event.target.value)">
+    
+                 <mat-icon  matSuffix>search</mat-icon>
+    
+             </div>
+    
+         </mat-form-field>
+    
+    
+     </header>
+    

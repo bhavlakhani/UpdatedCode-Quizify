@@ -1,0 +1,61 @@
+<section class="row">
+  <article *ngFor="let game of games" class="col-3 column">
+    <article class="p-10">
+      <mat-card class="game-card">
+        <mat-card-header>
+          <mat-card-title>{{ game.name }}</mat-card-title>
+          <mat-card-subtitle>Topic : {{ game.topic.name }}</mat-card-subtitle>
+          <mat-card-subtitle>Genre : {{ game.genre.name }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="{{ game.imageUrl }}"
+          alt="Photo of a {{ game.name }}"
+        />
+        <mat-card-content>
+          <ol>
+            <li *ngFor="let rule of game.rules">
+              {{ rule }}
+            </li>
+          </ol>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            mat-mini-fab
+            color="primary"
+            matTooltip="Edit Game"
+            matTooltipPosition="above"
+            matTooltipClass="game-tooltip"
+            class="game-admin-button"
+            (click)="editGame(game.id)"
+          >
+            <i class="material-icons">create</i>
+          </button>
+          <!-- <button
+            mat-mini-fab
+            color="warn"
+            matTooltip="Delete Game"
+            matTooltipPosition="above"
+            matTooltipClass="game-tooltip"
+            class="game-admin-button"
+            (click)="deleteGame(game)"
+          >
+            <i class="material-icons">delete_outline</i>
+          </button> -->
+        </mat-card-actions>
+      </mat-card>
+    </article>
+  </article>
+</section>
+
+<button
+    mat-mini-fab
+    color="primary"
+    matTooltip="Add Game"
+    matTooltipPosition="above"
+    matTooltipClass="game-tooltip"
+    class="game-add-button"
+    [routerLink]="['/add-game']"
+  >
+    <i class="material-icons">add</i>
+  </button>
