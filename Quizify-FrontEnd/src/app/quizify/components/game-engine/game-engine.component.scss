@@ -53,6 +53,11 @@
     padding: 15px !important;
   }
   
+  .py-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
   .p-10 {
     padding: 10px !important;
   }
@@ -96,13 +101,13 @@
 
 .mat-standard-chip {
     margin: auto !important;
-    padding: 20px !important;
     height: auto !important;
     border-radius: 50px !important;
-    max-width: 100% !important;
     font-size: 17px;
     letter-spacing: 2px;
 }
+
+
 
 .mat-horizontal-content-container {
     height: auto !important;
@@ -121,11 +126,16 @@
     box-shadow: 5px 5px 5px black;
 }
 
+.w-100 {
+  width: 100% !important;
+}
+
 .question-chip {
-    // background-color: gainsboro !important;
-    padding: 20px;
-    cursor: pointer !important;
+  padding: 20px !important;
+  cursor: pointer !important;
   pointer-events: none !important;
+  min-height: 100px !important;
+  width: 100% !important;
 }
 
 .option-list {
@@ -146,11 +156,61 @@
 }
 
 .option-chip:hover {
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 7px 7px 7px black;
 }
 
 #game-window {
     background: #3C3B3F;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top left, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top left, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to top left, rgb(163, 161, 141), rgb(10, 10, 10));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top left, rgb(163, 161, 141), rgb(10, 10, 10)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@media only screen and (min-width: 768px) {
+  .question-chip {
+    width: 1100px !important;
+  }
+  .option-chip {
+    width: 470px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .question-chip {
+    width: 100% !important;
+  }
+  .option-chip {
+    width: 100% !important;
+  }
+  .mat-chip-list-wrapper {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+.mat-stepper-horizontal-line {
+  display: none !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.correct-answer {
+  background-color: limegreen;
+}
+
+.wrong-answer {
+  background-color: red;
 }

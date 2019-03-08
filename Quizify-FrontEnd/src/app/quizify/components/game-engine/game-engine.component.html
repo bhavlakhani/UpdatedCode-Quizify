@@ -1,12 +1,12 @@
 <section id="game-window" class="p-10">
-  <mat-horizontal-stepper>
+  <mat-horizontal-stepper #stepper>
     <mat-step *ngFor="let question of questions; let i = index">
       <ng-template matStepLabel>Question {{ i }}</ng-template>
-      <mat-chip-list class="row">
-        <section col="col-6">
-          <article class="p-10">
+      <mat-chip-list class="row mb-20 mt-20">
+        <section col="col-12">
+          <article class="py-10[">
             <mat-chip class="question-chip">
-              <section>
+              <section class="w-100">
                 {{ question.statement }}
               </section>
             </mat-chip>
@@ -18,9 +18,9 @@
           class="col-6"
           *ngFor="let option of question.options; let j = index"
         >
-          <article class="p-10">
-            <mat-chip class="m-10 option-chip">
-              <section class="options">{{ j + 1 }}. {{ option }}</section>
+          <article class="p-15">
+            <mat-chip class="m-15 option-chip" (click)="selectdAnswer(i, j, chip)" #chip>
+              <section class="options p-10">{{ j + 1 }}. {{ option }}</section>
             </mat-chip>
           </article>
         </section>
@@ -31,6 +31,8 @@
           color="primary"
           class="nav-btn"
           matStepperPrevious
+          (click)="checkStepper(stepper)"
+          [ngClass]="{'d-none': firstQuestion}"
         >
           Back
         </button>
@@ -39,6 +41,8 @@
           color="primary"
           class="nav-btn"
           matStepperNext
+          (click)="checkStepper(stepper)"
+          [ngClass]="{'d-none': endQuestion}"
         >
           Next
         </button>

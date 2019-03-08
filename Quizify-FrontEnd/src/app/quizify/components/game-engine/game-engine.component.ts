@@ -14,6 +14,8 @@ import { LoginToken } from '../../tsclasses/login-token';
 
 import { SinglePlayer } from '../../tsclasses/single-player';
 import { Question } from '../../tsclasses/question';
+import { MatStepper } from '@angular/material/stepper';
+import { MatSnackBar, MatChip } from '@angular/material';
 
 @Component({
 
@@ -38,10 +40,15 @@ export class GameEngineComponent implements OnInit {
 
   private game: Game;
   private questions: Question[];
+  private firstQuestion: boolean;
+  private endQuestion: boolean;
 
 
-
-  constructor( private route: ActivatedRoute , private gameengineservice: GameEngineService) { }
+  constructor( 
+    private route: ActivatedRoute,
+    private gameengineservice: GameEngineService,
+    private snackBar: MatSnackBar
+    ) { }
   ngOnInit() {
     this.singlePlayer = new SinglePlayer();
     this.route.params.subscribe((data: any) => {
@@ -67,14 +74,45 @@ export class GameEngineComponent implements OnInit {
           console.log(this.game);
 
           this.questions = this.game.questions;
+          this.firstQuestion = true;
+          this.endQuestion = false;
         });
-
       }
-
-      });
-
+    });
   }
 
+  checkStepper(stepper: MatStepper) {
+    if(stepper.selectedIndex+1 === 1)
+      this.firstQuestion = true;
+    else
+      this.firstQuestion = false;
+
+    if(stepper.selectedIndex+1 === this.game.numOfQuestion)
+      this.endQuestion = true;
+    else
+      this.endQuestion = false;
+  }
+
+  selectdAnswer(questionNumber: number, optionNumber: number, chip: MatChip) {
+    console.log(chip);
+    chip.color = "primary";
+    
+    console.log(chip);
+    if(this.questions[questionNumber].correctAnswer.trim() === this.questions[questionNumber].options[optionNumber].trim())
+    {
+      this.snackBar.open('Correct Answer !', '', {
+        duration: 1500
+      });
+    }
+    else
+    {
+      // chip.classList.add('wrong-answer');
+      this.snackBar.open('Wrong Answer !', '', {
+        duration: 1500
+      });
+    }
+
+  }
 
 
 }
